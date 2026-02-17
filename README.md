@@ -171,8 +171,24 @@ npm run preview  # Preview production build locally
 
 ---
 
+## Google Analytics
+
+Page views are tracked via Google Analytics 4 when configured:
+
+1. Create a GA4 property at [analytics.google.com](https://analytics.google.com)
+2. Get your Measurement ID (format: `G-XXXXXXXXXX`)
+3. Create a `.env` file (copy from `.env.example`) and set:
+   ```
+   NUXT_PUBLIC_GTAG_ID=G-XXXXXXXXXX
+   ```
+4. For production (Vercel, Netlify, etc.), add `NUXT_PUBLIC_GTAG_ID` to your hosting environment variables
+
+Analytics is disabled when no ID is set (e.g. local development).
+
+---
+
 ## Optional enhancements
 
-- **Analytics**: Plausible, Fathom, or Google Analytics
+- **Analytics**: Plausible, Fathom, or other providers
 - **Email collection**: Formspree, Netlify Forms, or custom API for mailing list
 - **Newsletter**: Link to Mailchimp, Buttondown, etc. from Contact

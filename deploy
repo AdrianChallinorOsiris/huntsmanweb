@@ -1,0 +1,8 @@
+#!/bin/bash 
+echo "Deploying hunstman site to production web server"
+cd /Users/adrianchallinor/Documents/src/Huntsman
+npm run generate 
+ditto .output/public/ /Volumes/www/huntsman/ 
+
+echo "Deployed - op
+en https://www.thehuntsman.org"
