@@ -38,10 +38,13 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
     '/about': { prerender: true },
+    '/about-the-proposals/**': { prerender: true },
     '/contact': { prerender: true },
     '/documents': { prerender: true },
+    '/history-of-the-site': { prerender: true },
     '/letters': { prerender: true },
     '/news': { prerender: true },
     '/news/**': { prerender: true },
+    '/why-object': { prerender: true },
   },
 })
