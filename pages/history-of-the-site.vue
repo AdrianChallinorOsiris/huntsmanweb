@@ -23,6 +23,7 @@ useHead({
           withdrawn, while a follow-up scheme was rejected by an inspector in 2014. In 2016 Derreb Ltd again 
           submitted plans to developthe Huntsman site, but planning permission was refused. 
         </p>
+
         <p class="text-lg text-slate-600">
 
           Following an appeal to the High Court by the developer, the covenant restricting thedevelopment of the land 
@@ -36,6 +37,7 @@ useHead({
           </i>
 
         </p>
+
         <p class="text-lg text-slate-600">
 
           In 2026, Greenwich Council’s draft Local Plan set out its vision that the former 
@@ -44,6 +46,7 @@ useHead({
           Blackheath Park conservation area.’The Blackheath Society has already submitted an objection to the plan 
           as have anumber of local residents, setting out their concerns about the impact of the plan onthe local area.
         </p>
+
         <p class="text-lg text-slate-600">
           >b>Read aboiur concersn regarding the proposals
           <NuxtLink to="/why-object" class="text-amber-600 hover:text-amber-700 font-medium underline">

@@ -38,6 +38,7 @@ useHead({
         class="p-8 bg-slate-50 rounded-lg border border-slate-200 text-center text-slate-600"
       >
         <p>No documents have been added yet. Check back soon.</p>
+
         <p class="text-sm mt-2">
           To add documents, edit <code class="bg-slate-200 px-1 rounded">data/documents.ts</code>
         </p>

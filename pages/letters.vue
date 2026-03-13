@@ -21,11 +21,14 @@ useHead({
           We are preparing letter templates that you can use to submit objections or enquiries to the
           planning authority about The Huntsman Sports Ground and Moorehead Way development.
         </p>
+
         <p class="text-slate-600 mb-6">
           You will be able to add your contact details, edit the letter if you wish, and then open a
           pre-formatted email ready for you to approve and send.
         </p>
+
         <p class="text-slate-700 font-medium">This page is coming soon.</p>
+
         <p class="text-sm text-slate-500 mt-2">
           In the meantime, please <NuxtLink to="/contact" class="text-amber-600 hover:text-amber-700"
             >contact us</NuxtLink

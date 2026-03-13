@@ -21,11 +21,13 @@ useHead({
           the proposed housing development at The Huntsman Sports Ground, also known as the
           Moorehead Way development.
         </p>
+
         <p class="text-slate-600 mb-4">
           We have a number of concerns about aspects of the development and believe it is
           important that our community has access to clear information, key documents, and
           practical ways to have their voices heard.
         </p>
+
         <p class="text-slate-600">
           This website is a resource for anyone who wants to understand the proposals, access
           relevant documents, submit objections or enquiries to the planning authority, and stay

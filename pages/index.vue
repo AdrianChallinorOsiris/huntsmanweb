@@ -24,12 +24,14 @@ useHead({
           development. Find key documents, submit objections to the planning authority, and stay
           up to date with the latest news.
         </p>
+
         <br />
         <p >
           This is the land at the bottom of Brooklands Park, where it joins Manor Way. It used to be known as the Huntsman Sports Ground. 
           The developer is refering to the site as the Moorehead Way development. 
         </p>
         <img src="/images/Ourmap.jpg" alt="Huntsman Sports Ground" class="w-full h-auto">
+
         <p>The developer wishes to build 258 homes on the site comprising of 61 one-bedroom homes, 36 small two-bedroom homes, 
           113 larger two-bedroom homes, 6 three-bedroom homes, 10 four-bedroom homes. There will be 8 blocks of flats, ranging from 4 to 6 stories
           high. The higher flats are on the eastern end adjacent to Moorefield way, and the lower properties face on to the Cator Estate.

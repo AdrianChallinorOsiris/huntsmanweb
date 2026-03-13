@@ -21,6 +21,7 @@ useHead({
           plans for development on the Huntsman site. There was noopportunity for discussion at the online meeting, 
           and only a very short period duringwhich Derreb would accept comments on its proposals.
         </p>
+
         <p class="text-lg text-slate-600">
       
           Whilst no planning application has been formally submitted, the proposal includes 238 multi-storey flats and 
@@ -30,6 +31,7 @@ useHead({
           access to and from the development via the CatorEstate, which goes against an explicit ruling of the High 
           Court in 2017 and alsocontravenes the Royal Borough of Greenwich’s draft Local Plan.
         </p>
+
         <p class="text-lg text-slate-600">
           Read more about why we believe that the proposals are unsuitable for the site.
           <NuxtLink to="/why-object" class="text-amber-600 hover:text-amber-700 font-medium underline">
