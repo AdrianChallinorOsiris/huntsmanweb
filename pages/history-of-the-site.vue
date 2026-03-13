@@ -16,7 +16,7 @@ useHead({
     <div class="container mx-auto px-4 max-w-3xl">
       <h1 class="text-3xl font-bold text-slate-800 mb-6">History of the site</h1>
       <div class="prose prose-slate max-w-none">
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
           A covenant dating from 1956 stated that the ground could only be used for sport or for detached houses. 
           However, its protected status was lifted to allow some development of the land as part of 
           London Borough of Greenwich’s Kidbrooke Development Plan. In 2009 an application to build on the site was 
@@ -24,7 +24,7 @@ useHead({
           submitted plans to develop the Huntsman site, but planning permission was refused. 
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
 
           Following an appeal to the High Court by the developer, the covenant restricting the development of the land 
           was partially overturned in 2017. The High Court found that whilst the land should no longer be 
@@ -38,7 +38,7 @@ useHead({
 
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
 
           In 2026, Greenwich Council’s draft Local Plan set out its vision that the former 
           sportsground become ‘a residential neighbourhood with an appealing human scale and a generous offer of 
@@ -47,10 +47,9 @@ useHead({
           as have a number of local residents, setting out their concerns about the impact of the plan on the local area.
         </p>
 
-        <p class="text-lg text-slate-600">
-          >b>Read aboiur concersn regarding the proposals
+        <p class="text-lg text-slate-600 mb-4">
           <NuxtLink to="/why-object" class="text-amber-600 hover:text-amber-700 font-medium underline">
-            Why object?
+            <b>Read about our concerns regarding the proposals</b>
           </NuxtLink>
         </p>
       </div>

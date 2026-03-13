@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 
-const contactEmail = 'postmaster@osiris.co.uk'
+const contactEmail = 'julie@juliefenner.co.uk'
 
 const form = reactive({
   name: '',

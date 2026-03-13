@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     smtpUser: '',
     smtpPassword: '',
-    joinWhatsappRecipientEmail: 'postmaster@osiris.co.uk',
+    joinWhatsappRecipientEmail: 'julie@juliefenner.co.uk',
   },
 
   site: {

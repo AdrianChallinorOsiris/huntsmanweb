@@ -49,7 +49,7 @@ useHead({
           (to the right of the red square is the new Kidbrooke development which was under construction when 
           the photograph was taken)  
           <img src="/images/Ourmap.jpg" alt="Huntsman Sports Ground" class="w-full h-auto">
-       
+          <br />
         </p>
 
         <p class="font-bold text-slate-800 mb-4">2. Contravenes Restrictive Covenants</p>
@@ -85,7 +85,7 @@ useHead({
           with the suggestion that this could, in some unspecified way, be limited to residents of the development.
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
 
           The idea that traffic could be restricted to residents of the new development are unrealistic. Instead, this 
           would create a route between the Kidbrooke Estate and Blackheath that would be used not only by people living 
@@ -95,19 +95,19 @@ useHead({
           and used by people short-cutting from the A20 to Blackheath. 
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
           This would fundamentally change the nature of the area, increasing through-traffic and undermining safety 
           and tranquillity.
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
   
           It also brings the prospect that in due course a different view might be taken and planning 
           permission for access onto the estate roads might be given along with permission for such other 
           built development as might be required to enable access for vehicles to enjoy such access.
         </p>
 
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 mb-4">
           During the previous High Court case, Mr Macey, owner of Derreb Ltd, acknowledged that a similar scheme, 
           but with fewer proposed dwellings, would potentially place a significantly increased burden on the 
           Cator estate’s roads. Having previously acknowledged the potential impact and developed proposals to 
