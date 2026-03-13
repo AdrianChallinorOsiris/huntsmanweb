@@ -1,7 +1,49 @@
 <script setup lang="ts">
-const contactEmail = 'huntsman@osiris.co.uk'
-const whatsappLink =
-  'https://chat.whatsapp.com/I0XYVl1tkft4HURjA5tA7w?mode=gi_t'
+import { reactive, ref } from 'vue'
+
+const contactEmail = 'postmaster@osiris.co.uk'
+
+const form = reactive({
+  name: '',
+  address: '',
+  phone: '',
+})
+
+const isSubmitting = ref(false)
+const submitError = ref<string | null>(null)
+const submitSuccess = ref(false)
+
+async function onSubmit() {
+  isSubmitting.value = true
+  submitError.value = null
+  submitSuccess.value = false
+
+  try {
+    await $fetch('/api/join-whatsapp', {
+      method: 'POST',
+      body: {
+        name: form.name,
+        address: form.address,
+        phone: form.phone,
+      },
+    })
+    submitSuccess.value = true
+    form.name = ''
+    form.address = ''
+    form.phone = ''
+  } catch (err: unknown) {
+    let message = 'Something went wrong. Please try again.'
+    if (err && typeof err === 'object' && 'data' in err) {
+      const data = (err as { data?: { message?: string } }).data
+      if (data?.message) message = data.message
+    } else if (err instanceof Error) {
+      message = err.message
+    }
+    submitError.value = message
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
 
 <template>
@@ -11,56 +53,103 @@ const whatsappLink =
 
       <div class="space-y-8">
         <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+          <h2 class="text-xl font-semibold text-slate-800 mb-4">Join the WhatsApp group</h2>
+
+          <p class="text-slate-600 mb-6">
+            This WhatsApp group is run by local residents as a forum for sharing information and discussing concerns about the proposed developments in our area. The group aims to keep residents informed, allow people to exchange views, and coordinate community responses where appropriate. Participation is voluntary and members are expected to engage respectfully.
+          </p>
+
+          <div
+            v-if="submitSuccess"
+            class="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm"
+          >
+            Thank you. Your request has been sent. We will be in touch shortly.
+          </div>
+
+          <div
+            v-if="submitError"
+            class="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm"
+          >
+            {{ submitError }}
+          </div>
+
+          <form class="space-y-4" @submit.prevent="onSubmit">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+              <input
+                id="name"
+                v-model="form.name"
+                type="text"
+                required
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label for="address" class="block text-sm font-medium text-slate-700 mb-1">Address</label>
+              <textarea
+                id="address"
+                v-model="form.address"
+                required
+                rows="3"
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                placeholder="Your address"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Phone number</label>
+              <input
+                id="phone"
+                v-model="form.phone"
+                type="tel"
+                required
+                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                placeholder="Your phone number"
+              />
+            </div>
+            <button
+              type="submit"
+              :disabled="isSubmitting"
+              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {{ isSubmitting ? 'Sending...' : 'Submit' }}
+            </button>
+          </form>
+
+          <div class="mt-6 p-4 bg-white rounded-lg border border-slate-200 text-xs text-slate-600 space-y-3">
+            <h3 class="font-semibold text-slate-800">Privacy Notice</h3>
+            <p>
+              By completing this form you consent to us using your personal data to add you to the campaign WhatsApp group.
+            </p>
+            <p>
+              We will collect your name, phone number, and address. Your name and phone number will be used to add you to the WhatsApp group, where your phone number may be visible to other members of the group.
+            </p>
+            <p>
+              Your address will only be used to confirm that you are a local resident. We will not retain or store address information after this validation has been completed.
+            </p>
+            <p>
+              Your information will only be used for the purposes of administering this campaign group and will not be shared with third parties except as required to provide the WhatsApp group service.
+            </p>
+            <p>
+              You may leave the WhatsApp group or request removal of your information at any time.
+            </p>
+            <p>
+              The Huntsman & Moorehead Way campaign group is the data controller for this information.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
           <h2 class="text-xl font-semibold text-slate-800 mb-2">Email</h2>
           <p class="text-slate-600 mb-2">
-            Send us an email with any questions or to get involved:
+            This email is for website issues only, not for contact with the Huntsman campaign group. All contact with the Huntsman group should be via WhatsApp.
           </p>
           <a
             :href="`mailto:${contactEmail}`"
             class="text-amber-600 hover:text-amber-700 font-medium"
           >
-          <b> NOTE - This email address is NOT YET ACTIVE. </b>
             {{ contactEmail }}
           </a>
-        </div>
-
-        <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
-          <h2 class="text-xl font-semibold text-slate-800 mb-2">WhatsApp group</h2>
-          <p class="text-slate-600 mb-4">
-            Join our community WhatsApp group for updates and discussion:
-          </p>
-          <a
-            :href="whatsappLink"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-          >
-            <span>Join WhatsApp Group</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-              />
-            </svg>
-          </a>
-          <p class="text-sm text-slate-500 mt-4">Or scan the QR code below:</p>
-          <div class="mt-4 p-4 bg-white rounded-lg inline-block">
-            <img
-              src="/whatsapp-qr.png"
-              alt="WhatsApp group QR code - replace with your QR code at public/whatsapp-qr.png"
-              width="200"
-              height="200"
-              class="w-48 h-48 object-contain"
-            />
-            <p class="text-xs text-slate-500 mt-2 text-center">
-              Replace with your WhatsApp QR at <code>public/whatsapp-qr.png</code> or
-              <code>images/QR.png</code>
-            </p>
-          </div>
         </div>
       </div>
     </div>

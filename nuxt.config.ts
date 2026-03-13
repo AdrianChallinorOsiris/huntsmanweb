@@ -31,6 +31,11 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    resendApiKey: '',
+    joinWhatsappRecipientEmail: 'postmaster@osiris.co.uk',
+  },
+
   site: {
     url: 'https://thehuntsman.org.uk',
   },

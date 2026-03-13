@@ -33,6 +33,12 @@ useHead({
           relevant documents, submit objections or enquiries to the planning authority, and stay
           informed about developments.
         </p>
+
+        <p class="text-slate-600 mt-8">
+          <NuxtLink to="/why-object" class="text-amber-600 hover:text-amber-700 font-medium">
+            Why we are concerned about the proposals
+          </NuxtLink>
+        </p>
       </div>
     </div>
   </div>

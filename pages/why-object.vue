@@ -35,19 +35,19 @@ useHead({
 
         <p class="text-lg text-slate-600 mb-6">
           The site forms part of the Blackheath Cator Estate, an area defined by its exceptionally low housing density 
-          and distinctive spatial character. The Estatespans 282 acres, containing some 1,500 dwellings. 
+          and distinctive spatial character. The Estate spans 282 acres, containing some 1,500 dwellings. 
         </p>
 
         <p class="text-lg text-slate-600">
           In contrast, 
-          the plans propose 258 dwellings set in only 4.8 acres, including 9 blocksof multi-storey flats. This would 
-          represent a substantial and harmful departure fromthe established built form. Such buildings would fundamentally 
-          alter the aspectand character of the Cator Estate, which is characterised by detached dwellings set within 
-          generous plots. Introducing such a high-density development into this settingwould be wholly out of 
-          keeping with the established grain, layout, and historicpattern of development. The picture below shows 
+          the plans propose 258 dwellings set in only 4.8 acres, including 9 blocks of multi-storey flats. This would 
+          represent a substantial and harmful departure from the established built form. Such buildings would fundamentally 
+          alter the aspect and character of the Cator Estate, which is characterised by detached dwellings set within 
+          generous plots. Introducing such a high-density development into this setting would be wholly out of 
+          keeping with the established grain, layout, and historic pattern of development. The picture below shows 
           clearly how such a dense development would be out of keeping with the surrounding residential areas 
           (to the right of the red square is the new Kidbrooke development which was under construction when 
-          the photographwas taken)  
+          the photograph was taken)  
           <img src="/images/Ourmap.jpg" alt="Huntsman Sports Ground" class="w-full h-auto">
        
         </p>
@@ -56,7 +56,7 @@ useHead({
 
         <p class="text-lg text-slate-600 mb-6">
           The land in question is subject to long-standing restrictive covenants which clearly state that only detached 
-          houses may be built. These covenants were expresslywritten to prevent the type of high-density development 
+          houses may be built. These covenants were expressly written to prevent the type of high-density development 
           now being proposed.
         </p>
 
@@ -71,10 +71,10 @@ useHead({
         <p class="font-bold text-slate-800 mb-4">4. Loss of Privacy and Overbearing Impact</p>
 
         <p class="text-lg text-slate-600 mb-6">
-          The proposals would lead to loss of privacy, quiet, spaciousness, outlook andambience for people living on the 
-          development’s borders. High-rise or multi-storeybuildings would overlook neighbouring homes and gardens, 
-          resulting in a seriousand unacceptable loss of privacy. Existing properties would be dominated visually, 
-          with adverse impacts on residential amenity that cannot be mitigated through minordesign adjustments.
+          The proposals would lead to loss of privacy, quiet, spaciousness, outlook and ambience for people living on the 
+          development’s borders. High-rise or multi-storey buildings would overlook neighbouring homes and gardens, 
+          resulting in a serious and unacceptable loss of privacy. Existing properties would be dominated visually, 
+          with adverse impacts on residential amenity that cannot be mitigated through minor design adjustments.
         </p>
 
         <p class="font-bold text-slate-800 mb-4">5. Creation of a Rat Run</p>
@@ -87,34 +87,47 @@ useHead({
 
         <p class="text-lg text-slate-600">
 
-          The idea that traffic could be restricted to residents of the new development areunrealistic. Instead, this 
-          would create a route between the Kidbrooke Estate andBlackheath that would be used not only by people living 
-          in the new development,but by residents of the wider Kidbrooke development and beyond. Brooklands Park has 
+          The idea that traffic could be restricted to residents of the new development are unrealistic. Instead, this 
+          would create a route between the Kidbrooke Estate and Blackheath that would be used not only by people living 
+          in the new development, but by residents of the wider Kidbrooke development and beyond. Brooklands Park has 
           already seen a substantial increase in pedestrians using this route, and it would be wholly expected 
-          for motorists to do the same. It is also likely that the routewould quickly be discovered 
+          for motorists to do the same. It is also likely that the route would quickly be discovered 
           and used by people short-cutting from the A20 to Blackheath. 
         </p>
 
         <p class="text-lg text-slate-600">
-          This would fundamentally change the nature of the area, increasing through-trafficand undermining safety 
+          This would fundamentally change the nature of the area, increasing through-traffic and undermining safety 
           and tranquillity.
         </p>
 
         <p class="text-lg text-slate-600">
   
           It also brings the prospect that in due course a different view might be taken and planning 
-          permission for access onto the estate roads might be given along withpermission for such other 
-          built development as might be required to enable access forvehicles to enjoy such access.
+          permission for access onto the estate roads might be given along with permission for such other 
+          built development as might be required to enable access for vehicles to enjoy such access.
         </p>
 
         <p class="text-lg text-slate-600">
-          During the previous High Court case, Mr Macey, owner of Derreb Ltd, acknowledgedthat a similar scheme, 
-          but with fewer proposed dwellings, would potentially place asignificantly increased burden on the 
+          During the previous High Court case, Mr Macey, owner of Derreb Ltd, acknowledged that a similar scheme, 
+          but with fewer proposed dwellings, would potentially place a significantly increased burden on the 
           Cator estate’s roads. Having previously acknowledged the potential impact and developed proposals to 
           restrict access, it is obtuse for Derreb to re-introduce access<Footnote :text="paragraph52Footnote" />.
         </p>
 
         <p class="font-bold text-slate-800 mb-4">6. Danger created by vehicular access</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+          <img
+            src="/Brooklands%20Park.jpeg"
+            alt="Brooklands Park - access point to the Huntsman site"
+            class="flex-1 min-w-0 rounded-lg object-cover"
+          >
+          <img
+            src="/Manor%20Way.jpeg"
+            alt="Manor Way - narrow access point where Brooklands Park and Manor Way meet"
+            class="flex-1 min-w-0 rounded-lg object-cover"
+          >
+        </div>
 
         <p class="text-lg text-slate-600 mb-6">
           Access from the Cator estate to the site is at its northwest corner where Brooklands Park 
@@ -137,7 +150,7 @@ useHead({
 
         <p class="text-lg text-slate-600 mb-6">
           Vehicular access via the Cator Estate directly contravenes the High Court’s ruling in 2017 
-          that expressly sets out that there should be no motorised access via theCator estate, 
+          that expressly sets out that there should be no motorised access via the Cator estate, 
           and that access to and from the estate be limited to pedestrians, pedal cycles and mobility scooters<Footnote :text="paragraph135gFootnote" />.
         </p>
 
@@ -145,9 +158,9 @@ useHead({
 
         <p class="text-lg text-slate-600 mb-6">
           Traffic generated by this development would use the private roads of the Cator Estate. These roads are not owned 
-          or maintained by the Royal Borough of Greenwich. therefore inappropriate and inequitable to allocate development 
-          that would materiallyincrease wear, congestion, 
-          and maintenance burdens on infrastructure for which theCouncil bears no responsibility, but which residents pay for.
+          or maintained by the Royal Borough of Greenwich. It is therefore inappropriate and inequitable to allocate development 
+          that would materially increase wear, congestion, 
+          and maintenance burdens on infrastructure for which the Council bears no responsibility, but which residents pay for.
         </p>
       </div>
     </div>

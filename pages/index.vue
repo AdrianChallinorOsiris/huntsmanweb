@@ -28,18 +28,24 @@ useHead({
         <br />
         <p >
           This is the land at the bottom of Brooklands Park, where it joins Manor Way. It used to be known as the Huntsman Sports Ground. 
-          The developer is refering to the site as the Moorehead Way development. 
+          The developer is referring to the site as the Moorehead Way development. 
         </p>
-        <img src="/images/Ourmap.jpg" alt="Huntsman Sports Ground" class="w-full h-auto">
 
-        <p>The developer wishes to build 258 homes on the site comprising of 61 one-bedroom homes, 36 small two-bedroom homes, 
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-6 max-w-4xl mx-auto">
+          <div class="w-full md:flex-[9] md:max-w-md h-72 md:h-96 flex items-center justify-center">
+            <img src="/images/Ourmap.jpg" alt="Huntsman Sports Ground" class="max-w-full max-h-full w-auto h-auto object-contain">
+          </div>
+          <div class="w-full md:flex-[2] md:max-w-md h-72 md:h-96 flex items-center justify-center">
+            <img src="/images/Mooreplan.jpg" alt="Moorehead Way development plan" class="max-w-full max-h-full w-auto h-auto object-contain">
+          </div>
+        </div>
+
+        <p class="mt-6">The developer wishes to build 258 homes on the site comprising of 61 one-bedroom homes, 36 small two-bedroom homes, 
           113 larger two-bedroom homes, 6 three-bedroom homes, 10 four-bedroom homes. There will be 8 blocks of flats, ranging from 4 to 6 stories
           high. The higher flats are on the eastern end adjacent to Moorefield way, and the lower properties face on to the Cator Estate.
-          Thios would make it a high denisity building project. 
+          This would make it a high density building project. 
           </p>
       </div>
-      <img src="/images/Mooreplan.jpg" alt="Huntsman Sports Ground" class="w-full h-auto">
-
     </section>
 
     <section class="py-12">

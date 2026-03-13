@@ -15,57 +15,14 @@
               Home
             </NuxtLink>
           </li>
-          <li
-            class="relative"
-            @mouseenter="openDropdown"
-            @mouseleave="scheduleClose"
-          >
-            <button
-              type="button"
-              class="hover:text-amber-400 transition-colors flex items-center gap-1"
-              :class="{ 'text-amber-400 font-medium': isAboutProposalsActive }"
-              aria-haspopup="true"
-              :aria-expanded="dropdownOpen"
-              @click="dropdownOpen = !dropdownOpen"
+          <li>
+            <NuxtLink
+              to="/about-the-proposals"
+              class="hover:text-amber-400 transition-colors"
+              active-class="text-amber-400 font-medium"
             >
               About the proposals
-              <svg
-                class="w-4 h-4 transition-transform"
-                :class="{ 'rotate-180': dropdownOpen }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <ul
-              v-show="dropdownOpen"
-              class="absolute left-0 top-full pt-2 -mt-2 min-w-[200px] bg-slate-700 rounded-md shadow-lg py-1 z-50"
-              @mouseenter="openDropdown"
-              @mouseleave="scheduleClose"
-            >
-              <li>
-                <NuxtLink
-                  to="/about-the-proposals/the-site"
-                  class="block px-5 py-3 hover:bg-slate-600 hover:text-amber-400 transition-colors text-base"
-                  active-class="bg-slate-600 text-amber-400"
-                  @click="dropdownOpen = false"
-                >
-                  The site
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/about-the-proposals/the-proposals"
-                  class="block px-5 py-3 hover:bg-slate-600 hover:text-amber-400 transition-colors text-base"
-                  active-class="bg-slate-600 text-amber-400"
-                  @click="dropdownOpen = false"
-                >
-                  The proposals
-                </NuxtLink>
-              </li>
-            </ul>
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink
@@ -99,32 +56,3 @@
     </nav>
   </header>
 </template>
-
-<script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-const dropdownOpen = ref(false)
-
-const isAboutProposalsActive = computed(() =>
-  route.path.startsWith('/about-the-proposals')
-)
-
-let closeTimeout: ReturnType<typeof setTimeout> | null = null
-
-function openDropdown() {
-  if (closeTimeout) {
-    clearTimeout(closeTimeout)
-    closeTimeout = null
-  }
-  dropdownOpen.value = true
-}
-
-function scheduleClose() {
-  closeTimeout = setTimeout(() => {
-    dropdownOpen.value = false
-    closeTimeout = null
-  }, 200)
-}
-</script>
