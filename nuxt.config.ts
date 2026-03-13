@@ -32,7 +32,8 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    resendApiKey: '',
+    smtpUser: '',
+    smtpPassword: '',
     joinWhatsappRecipientEmail: 'postmaster@osiris.co.uk',
   },
 
